@@ -31,7 +31,7 @@ if response.status_code == 200:
         # Simpan ke file Excel jika ada data
         if table_data and isi_data:
             df = pd.DataFrame(isi_data, columns=table_data[0])
-            df.to_excel('Negara-negara-Benua-Afrika.xlsx', index=False)
+            df.to_csv('Negara-negara-Benua-Afrika.csv', index=False)
             print("Data berhasil disimpan ke file Excel")
     else:
         print("Tabel tidak ditemukan di halaman")
